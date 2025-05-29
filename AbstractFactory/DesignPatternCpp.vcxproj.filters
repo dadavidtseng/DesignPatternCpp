@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DesignPatternCpp.cpp">
+    <ClCompile Include="AbstractFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AbstractFactory", "DesignPatternCpp\AbstractFactory.vcxproj", "{CFD7DEC9-D9FD-43B8-8A41-5875BFDDA583}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AbstractFactory", "AbstractFactory\AbstractFactory.vcxproj", "{CFD7DEC9-D9FD-43B8-8A41-5875BFDDA583}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
