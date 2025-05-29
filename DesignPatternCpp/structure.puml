@@ -1,0 +1,80 @@
+﻿@startuml
+
+interface AbstractFactory <<interface>>
+{
+    + CreateProductA(): AbstractProductA = 0
+    + CreateProductB(): AbstractProductB = 0
+}
+
+class ConcreteFactory1
+{
+    + CreateProductA(): AbstractProductA
+    + CreateProductB(): AbstractProductB
+}
+
+class ConcreteFactory2
+{
+    + CreateProductA(): AbstractProductA
+    + CreateProductB(): AbstractProductB
+}
+
+interface AbstractProductA <<interface>>
+{
+	+ FooFunctionA() = 0
+}
+
+interface AbstractProductB <<interface>>
+{
+	+ FooFunctionB() = 0
+	+ FooFunctionBWithProductA(collaborator: AbstractProductA) = 0
+}
+
+class ConcreteProductA1
+{
+	+ FooFunctionA(): std::string
+}
+
+class ConcreteProductA2
+{
+	+ FooFunctionA(): std::string
+}
+
+class ConcreteProductB1
+{
+	+ FooFunctionB(): std::string
+	+ FooFunctionBWithProductA(): std::string
+}
+
+class ConcreteProductB2
+{
+	+ FooFunctionB(): std::string
+    + FooFunctionBWithProductA(): std::string
+}
+
+class main
+{
+    + ClientCode(abstractFactory: AbstractFactory)
+}
+
+ConcreteFactory1 ..> ConcreteProductA1
+ConcreteFactory1 ..> ConcreteProductA2
+ConcreteFactory1 ..|> AbstractFactory
+
+ConcreteFactory2 ..> ConcreteProductB1
+ConcreteFactory2 ..> ConcreteProductB2
+ConcreteFactory2 ..|> AbstractFactory
+
+AbstractProductA <|-- ConcreteProductA1
+AbstractProductA <|-- ConcreteProductA2
+AbstractProductA <|-- AbstractProductB
+
+AbstractProductA <-- ConcreteProductB1
+AbstractProductB <-- ConcreteProductB1
+AbstractProductA <|-- ConcreteProductB2
+AbstractProductB <|-- ConcreteProductB2
+
+main --> AbstractFactory
+main ..> ConcreteFactory1
+main ..> ConcreteFactory2
+
+@enduml

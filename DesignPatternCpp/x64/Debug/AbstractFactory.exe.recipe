@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Yu-Wei Tseng\Downloads\DesignPatternCpp\x64\Debug\AbstractFactory.exe</FullPath>
+      <FullPath>C:\DesignPattern\DesignPatternCpp\x64\Debug\AbstractFactory.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
